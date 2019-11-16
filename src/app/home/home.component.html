@@ -1,0 +1,29 @@
+<p>Employees Are::</p>
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Remove</th>
+                <th>Update</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of emps">
+                <td>{{e.no}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.address}}</td>
+                <td><button (click)="Delete(e.no)" type="button" class="btn btn-danger">Delete</button></td>
+                <td><a class="btn btn-default" routerLink="/edit/{{e.no}}" role="button">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>
+

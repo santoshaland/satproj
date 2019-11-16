@@ -1,0 +1,27 @@
+<p>register works!</p>
+
+<form #myForm="ngForm" (ngSubmit)="Addemp(myForm)"  role="form">
+    <legend>Add Employee</legend>
+
+
+    <div class="form-group">
+            <label for="Name">No</label>
+            <input ngModel type="text" class="form-control" id="no" name="no">
+        </div>
+
+    <div class="form-group">
+            <label for="Name">Name</label>
+            <input ngModel type="text" class="form-control" id="name" name="name">
+        </div>
+    
+    
+        <div class="form-group">
+                <label for="Address">Address</label>
+                <input ngModel type="text" class="form-control" id="address" name="address">
+            </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+
+    <span>
+    {{message}}
+    </span>
+</form>
